@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+   <script>
+     var startPos;
+     var map;
+   
+     function init() {
+         if (navigator.geolocation) {
+             document.getElementById("support").innerHTML = "<p style='color:green'>Great! This browser supports HTML5 Geolocation</p>";
+             navigator.geolocation.getCurrentPosition(updateLocation, handleLocationError, {
+                 timeout: 50000
+             });
+             //navigator.geolocation.watchPosition(updateCurrPosition,handleLocationError);
+   
+         } else {
+             document.getElementById("support").innerHTML = "<p style='color:red'>Oops! This browser does not support HTML5 Geolocation</p>";
+         }
+     }
+   
+
+  
+     function handleLocationError(error) {
+         switch (error.code) {
+             case 0:
+                 updateStatus("There was an error while retrieving your location: " + error.message);
+                 break;
+   
+             case 1:
+                 updateStatus("The user prevented this page from retrieving the location.");
+                 break;
+   
+             case 2:
+                 updateStatus("The browser was unable to determine your location: " + error.message);
+   
+                 break;
+   
+             case 3:
+   
+                 updateStatus("The browser timed out before retrieving the location.");
+   
+                 break;
+         }
+     }
+   
+     function updateStatus(msg) {
+         document.getElementById("divStatus").innerHTML = msg;
+     }
+   </script>
+</head>
+<body onload="init()">
+<div class="home" style="background-image: linear-gradient(180deg, pink,wheat,whitesmoke,white);">
+<div class="container text-center">
+
+    <!-- <div class="cloudClass" style="padding-bottom: 20px;">
+        <i class="fas fa-3x fa-cloud cloud"></i>
+     </div> -->
+    <div class="images">
+     <img class="fixedImage" src="../assets/images/sm.png" style="width:90px;height:90px;">
+     <div class="cloud" style="margin-top:-47px;">
+     <i >
+        <img class="cloudMove" src="../assets/images/cloud.svg" style="width:85px;height:90px;" >
+     </i> 
+    </div>
+</div>
+<div class="card text-center" >
+    <div class="card-body">
+        <p class="text-center">Weather in  {{weather.data.nearest_area[0].region[0].value}} , {{weather.data.nearest_area[0].country[0].value}}</p>
+        <p class="text-center">{{ currentDate | date:'medium'}}</p>
+        
+        <p class="text-center"> {{ weather.data.current_condition[0].temp_C}}&#8451; | {{ weather.data.current_condition[0].weatherDesc[0].value}} </p>
+        <p class="text-center"> Humidity: {{ weather.data.current_condition[0].humidity}} %  </p>
+        <p class="text-center">  Pressure: {{ weather.data.current_condition[0].pressure}} hpa </p>
+        <p class="text-center">  wind Speed: {{ weather.data.current_condition[0].windspeedKmph}} Kmph </p>
+        <p class="text-center"> Sunrise: {{ weather.data.weather[0].astronomy[0].sunrise}}  </p>
+        <p class="text-center"> Sunset: {{ weather.data.weather[0].astronomy[0].sunset}}  </p>
+        <p class="text-center"> Forecast: {{ weather.data.weather[0].mintempC}} &#8451; / {{ weather.data.weather[0].maxtempC}}&#8451; </p>
+        <p class="text-center"> chance of rain : {{ weather.data.weather[0].hourly[0].chanceofrain}} % </p>
+         <!-- <p class="card-text"> Pressure: {{ weather.main.pressure}} hpa </p>
+         <p class="card-text">  Sunrise at  {{weather.sys.sunrise*1000 | date:'h:mm'}} </p>
+         <p class="card-text"> Sunset at {{weather.sys.sunset*1000 | date:'h:mm'}}</p> -->
+    </div>
+ </div>
+ <div class="btn1">
+    <a routerLink="second_display"class="btn btn-secondary">See more Cities & Details</a>
+     </div>
+</div>
+
+</div>
+</body>
+</html>
