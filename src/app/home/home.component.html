@@ -12,7 +12,6 @@
              navigator.geolocation.getCurrentPosition(updateLocation, handleLocationError, {
                  timeout: 50000
              });
-             //navigator.geolocation.watchPosition(updateCurrPosition,handleLocationError);
    
          } else {
              document.getElementById("support").innerHTML = "<p style='color:red'>Oops! This browser does not support HTML5 Geolocation</p>";
@@ -65,21 +64,19 @@
     </div>
 </div>
 <div class="card text-center" >
-    <div class="card-body">
+    <div class="card-body" style="padding-top: 70px;">
         <p class="text-center">Weather in  {{weather.data.nearest_area[0].region[0].value}} , {{weather.data.nearest_area[0].country[0].value}}</p>
         <p class="text-center">{{ currentDate | date:'medium'}}</p>
         
         <p class="text-center"> {{ weather.data.current_condition[0].temp_C}}&#8451; | {{ weather.data.current_condition[0].weatherDesc[0].value}} </p>
+        <p class="text-center"> chance of rain : {{ weather.data.weather[0].hourly[0].chanceofrain}} % </p>
         <p class="text-center"> Humidity: {{ weather.data.current_condition[0].humidity}} %  </p>
         <p class="text-center">  Pressure: {{ weather.data.current_condition[0].pressure}} hpa </p>
-        <p class="text-center">  wind Speed: {{ weather.data.current_condition[0].windspeedKmph}} Kmph </p>
+        <!-- <p class="text-center">  wind Speed: {{ weather.data.current_condition[0].windspeedKmph}} Kmph </p>
         <p class="text-center"> Sunrise: {{ weather.data.weather[0].astronomy[0].sunrise}}  </p>
         <p class="text-center"> Sunset: {{ weather.data.weather[0].astronomy[0].sunset}}  </p>
         <p class="text-center"> Forecast: {{ weather.data.weather[0].mintempC}} &#8451; / {{ weather.data.weather[0].maxtempC}}&#8451; </p>
-        <p class="text-center"> chance of rain : {{ weather.data.weather[0].hourly[0].chanceofrain}} % </p>
-         <!-- <p class="card-text"> Pressure: {{ weather.main.pressure}} hpa </p>
-         <p class="card-text">  Sunrise at  {{weather.sys.sunrise*1000 | date:'h:mm'}} </p>
-         <p class="card-text"> Sunset at {{weather.sys.sunset*1000 | date:'h:mm'}}</p> -->
+         -->
     </div>
  </div>
  <div class="btn1">
