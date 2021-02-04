@@ -5,11 +5,15 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  {path:'second_display',component:SecondDisplayComponent}
+  { path: 'second_display', component: SecondDisplayComponent },
+  { path: '**', redirectTo: '' },
+ 
+
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

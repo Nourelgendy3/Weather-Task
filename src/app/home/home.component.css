@@ -1,22 +1,22 @@
 .home{
    background-image: linear-gradient(180deg, pink,wheat,whitesmoke,white);
-  width:100%;
-  height:100%
+  width:100vw;
+  height:100vh;
+  background-size: 100vw 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto ;
 }
-/* .container{
-   padding-top: 55px;
-   align-content: center;
-} */
+
 .text-center{
    font-weight:bold;
 
 }
 .card{
-   justify-content:center;
- margin-top: 50px;
+   margin-top: 30px;
    border-radius: 25px;
-   height:400px;
-   width:400px;
+   min-height:300px;
+   min-width: 300px;
    background-color: whitesmoke;
    display: block;
    margin-left: auto;
@@ -32,9 +32,7 @@
     margin-top:35px;
     position: center;
  }
- /* .cloudClass{
-   margin-top: -40px;
-  } */
+ 
   
   .cloudMove{
      margin-top: 12px;
@@ -52,33 +50,10 @@
      to{margin-left: 65px;}
   }
  
-  /* img{
-     position: center;
-     margin-top: 100px;
-  } */
 
  .btn1{
     border-radius: 25px;
    padding-top: 15px;
    
  }
-
-/* .cloud{
-   top: -90px;
-} */
-
- /* .images{
-    display: block;
-    top:-20px;
- } */
-
- @media screen and (max-width:600px){
-   .container{
-      top:50%;
-      left:40%;
-   }
-   .home{
-    height: 700px;
- }
-}
 

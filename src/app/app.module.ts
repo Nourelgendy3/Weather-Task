@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SecondDisplayComponent } from './second-display/second-display.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SecondDisplayComponent
+    SecondDisplayComponent,
   ],
   imports: [
     BrowserModule,
