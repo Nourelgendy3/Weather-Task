@@ -14,7 +14,6 @@
    float: right;
 }
 footer{
-   /* position:absolute; */
    position: fixed;
    padding-top: 40px;
    bottom:0;

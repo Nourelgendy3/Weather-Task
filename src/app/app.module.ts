@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SecondDisplayComponent } from './second-display/second-display.component';
 import { ThirdDisplayComponent } from './third-display/third-display.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [

@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <!-- using HTML5 Geolocation to detect user location -->
    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
    <script>
      var startPos;
@@ -51,10 +53,6 @@
 <body onload="init()">
 <div class="home" style="background-image: linear-gradient(180deg, pink,wheat,whitesmoke,white);">
 <div class="container text-center">
-
-    <!-- <div class="cloudClass" style="padding-bottom: 20px;">
-        <i class="fas fa-3x fa-cloud cloud"></i>
-     </div> -->
     <div class="images">
      <img class="fixedImage" src="../assets/images/sm.png" style="width:90px;height:90px;">
      <div class="cloud" style="margin-top:-47px;">
@@ -63,6 +61,7 @@
      </i> 
     </div>
 </div>
+<!-- display simple weather data -->
 <div class="card text-center" >
     <div class="card-body" style="padding-top: 45px;">
         <p class="text-center">Weather in  {{weather.data.nearest_area[0].region[0].value}} , {{weather.data.nearest_area[0].country[0].value}}</p>
@@ -85,6 +84,7 @@
 </div>
 
 </div>
+<!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
