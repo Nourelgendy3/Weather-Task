@@ -69,7 +69,7 @@
         <p class="text-center">{{ currentDate | date:'medium'}}</p>
         
         <p class="text-center"> {{ weather.data.current_condition[0].temp_C}}&#8451; | {{ weather.data.current_condition[0].weatherDesc[0].value}} </p>
-        <p class="text-center"> chance of rain : {{ weather.data.weather[0].hourly[0].chanceofrain}} % </p>
+        <!-- <p class="text-center"> chance of rain : {{ weather.data.weather[0].hourly[0].chanceofrain}} % </p> -->
         <p class="text-center"> Humidity: {{ weather.data.current_condition[0].humidity}} %  </p>
         <p class="text-center">  Pressure: {{ weather.data.current_condition[0].pressure}} hpa </p>
         <!-- <p class="text-center">  wind Speed: {{ weather.data.current_condition[0].windspeedKmph}} Kmph </p>

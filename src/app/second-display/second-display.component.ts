@@ -6,6 +6,7 @@ import { WeatherService } from '../weather.service';
   styleUrls: ['./second-display.component.css']
 })
 export class SecondDisplayComponent implements OnInit {
+  
   lat;
   lon;
   weatherD;
