@@ -1,5 +1,5 @@
 # WhatTheWeather
-The Desin link: https://xd.adobe.com/view/a04abcdc-cb77-4dab-bbb5-1487e0586308-f519/
+The Design link: https://xd.adobe.com/view/a04abcdc-cb77-4dab-bbb5-1487e0586308-f519/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
